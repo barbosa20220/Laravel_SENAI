@@ -12,7 +12,7 @@
         <p style="color:green">{{ session('succes')}}</p>
     @endif
 
-    <from action="{{route('aluno.salvar') }}" methond="POST">
+    <form action="{{route('aluno.salvar') }}" method="POST">
         @csrf
         <label for="nome">Nome: </label>
         <input type="text" name="nome" id="nome" placeholder="Nome..."
@@ -23,8 +23,8 @@
         <input type="email" name="email" id="email" placeholder="email..."
             required value="{{ old('email')}}"
         >
-        <input type="submit" value="Cadastrar">
-    </from>
+        <input type="submit" value="cadastrar">
+    </form>
 
     @if($errors->any())
         <div style="color: red">
