@@ -48,4 +48,10 @@
         return redirect()->back()->while('success','Aluno atualizado com suceso');
     }
 
+    public function deletar($id){
+        $aluno = Aluno::findOrFail($id);
+        $aluno->delete();
+        
+        return redirect()->route('aluno.listar')->with('sucess','Aluno excluido com sucesso!');
+    }
  }
