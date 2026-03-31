@@ -28,7 +28,7 @@
 
                     </td>
                     <td>
-                        <form action=" {{ route('aluno.deletar', $aluno->id)}}" method="POST" onsubmit="return confirma ('Deseja realmente excluir');">
+                        <form action=" {{ route('aluno.deletar', $aluno->id)}}" method="POST" onsubmit="return confirmi ('Deseja realmente excluir');">
                             @csrf
                             @method('DELETE')
                             <button type="submit">Excluir</button>
