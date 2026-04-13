@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>atualizar Aluno</title>
+    <title>atualizar Biblioteca</title>
 </head>
 <body>
-    <h1>Atualizar Aluno</h1>
+    <h1>Atualizar Biblioteca</h1>
 
     @if(session('success'))
         <p style="color: green">{{ session('success') }}</p>
@@ -18,10 +18,10 @@
             @method('PUT')
 
             <input type="text" name="nome"
-            value="{{ old('nome', $aluno->nome)}}" required>
+            value="{{ old('nome', $biblioteca->nome)}}" required>
         
             <input type="text" name="email"
-         value="{{ old('email',$aluno->email)}}" required>
+         value="{{ old('email',$biblioteca->email)}}" required>
         <button type="submit">Atualizar</button>
     </form>
 
